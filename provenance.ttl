@@ -1,0 +1,219 @@
+@base <http://snakemake-provenance#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sym:   <http://fr.symetric/vocab#> .
+@prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<:gaignard-a> a prov:Agent, prov:Person . 
+
+<> 
+	a prov:Bundle, prov:Entity;
+	prov:wasAttributedTo <:gaignard-a>;
+	prov:generatedAtTime "2018-05-28T15:38:21.745629"^^xsd:dateTime.
+
+<http://snakemake-provenance#activity-e404b315-0096-48db-a749-ebfecc0ba37f>
+	a prov:Activity ;
+	rdfs:comment """
+		echo 'flirt -i patient2.fonc.nii -ref patient2.t1.nii -out patient2.mat' ; touch patient2.mat
+	""" ;
+	prov:wasAssociatedWith <#registration> ;
+	prov:startedAtTime "2018-05-28T15:38:21.956619"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.956629"^^xsd:dateTime; 
+	prov:used <patient2.fonc.nii> ; 
+	prov:used <patient2.t1.nii> ; 
+.
+
+<patient2.mat>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-e404b315-0096-48db-a749-ebfecc0ba37f>;
+    prov:wasAttributedTo <#registration>;
+    rdfs:label "patient2.mat"; 
+	prov:wasDerivedFrom <patient2.fonc.nii> ; 
+	prov:wasDerivedFrom <patient2.t1.nii> ; 
+.
+
+<http://snakemake-provenance#activity-346f7a87-5526-474c-82e9-00c71a97f389>
+	a prov:Activity ;
+	rdfs:comment """
+		touch Y_patient2.t1.nii W_patient2.t1.nii
+	""" ;
+	prov:wasAssociatedWith <#normalization> ;
+	prov:startedAtTime "2018-05-28T15:38:21.960763"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.960785"^^xsd:dateTime; 
+	prov:used <patient2.t1.nii> ; 
+.
+
+<Y_patient2.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-346f7a87-5526-474c-82e9-00c71a97f389>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "Y_patient2.t1.nii"; 
+	prov:wasDerivedFrom <patient2.t1.nii> ; 
+.
+
+<W_patient2.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-346f7a87-5526-474c-82e9-00c71a97f389>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "W_patient2.t1.nii"; 
+	prov:wasDerivedFrom <patient2.t1.nii> ; 
+.
+
+<http://snakemake-provenance#activity-d6559911-d4e4-4a85-95f2-d9a526e961a6>
+	a prov:Activity ;
+	rdfs:comment """
+		touch Y_patient3.t1.nii W_patient3.t1.nii
+	""" ;
+	prov:wasAssociatedWith <#normalization> ;
+	prov:startedAtTime "2018-05-28T15:38:21.967581"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.967599"^^xsd:dateTime; 
+	prov:used <patient3.t1.nii> ; 
+.
+
+<Y_patient3.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-d6559911-d4e4-4a85-95f2-d9a526e961a6>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "Y_patient3.t1.nii"; 
+	prov:wasDerivedFrom <patient3.t1.nii> ; 
+.
+
+<W_patient3.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-d6559911-d4e4-4a85-95f2-d9a526e961a6>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "W_patient3.t1.nii"; 
+	prov:wasDerivedFrom <patient3.t1.nii> ; 
+.
+
+<http://snakemake-provenance#activity-1c7c1e3b-d044-4f6a-abdd-e9a7a1403218>
+	a prov:Activity ;
+	rdfs:comment """
+		echo 'flirt -i patient3.fonc.nii -ref patient3.t1.nii -out patient3.mat' ; touch patient3.mat
+	""" ;
+	prov:wasAssociatedWith <#registration> ;
+	prov:startedAtTime "2018-05-28T15:38:21.972196"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.972210"^^xsd:dateTime; 
+	prov:used <patient3.fonc.nii> ; 
+	prov:used <patient3.t1.nii> ; 
+.
+
+<patient3.mat>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-1c7c1e3b-d044-4f6a-abdd-e9a7a1403218>;
+    prov:wasAttributedTo <#registration>;
+    rdfs:label "patient3.mat"; 
+	prov:wasDerivedFrom <patient3.fonc.nii> ; 
+	prov:wasDerivedFrom <patient3.t1.nii> ; 
+.
+
+<http://snakemake-provenance#activity-a7cdebcb-e160-4fc3-9c15-2ba49a4327c4>
+	a prov:Activity ;
+	rdfs:comment """
+		touch Y_patient1.t1.nii W_patient1.t1.nii
+	""" ;
+	prov:wasAssociatedWith <#normalization> ;
+	prov:startedAtTime "2018-05-28T15:38:21.974711"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.974724"^^xsd:dateTime; 
+	prov:used <patient1.t1.nii> ; 
+.
+
+<Y_patient1.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-a7cdebcb-e160-4fc3-9c15-2ba49a4327c4>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "Y_patient1.t1.nii"; 
+	prov:wasDerivedFrom <patient1.t1.nii> ; 
+.
+
+<W_patient1.t1.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-a7cdebcb-e160-4fc3-9c15-2ba49a4327c4>;
+    prov:wasAttributedTo <#normalization>;
+    rdfs:label "W_patient1.t1.nii"; 
+	prov:wasDerivedFrom <patient1.t1.nii> ; 
+.
+
+<http://snakemake-provenance#activity-04a29808-e5e3-4cea-a6f1-95c30f0a62e3>
+	a prov:Activity ;
+	rdfs:comment """
+		touch W_patient2.fonc.nii
+	""" ;
+	prov:wasAssociatedWith <#apply_norm> ;
+	prov:startedAtTime "2018-05-28T15:38:21.979439"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.979452"^^xsd:dateTime; 
+	prov:used <patient2.mat> ; 
+	prov:used <Y_patient2.t1.nii> ; 
+	prov:used <patient2.fonc.nii> ; 
+.
+
+<W_patient2.fonc.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-04a29808-e5e3-4cea-a6f1-95c30f0a62e3>;
+    prov:wasAttributedTo <#apply_norm>;
+    rdfs:label "W_patient2.fonc.nii"; 
+	prov:wasDerivedFrom <patient2.mat> ; 
+	prov:wasDerivedFrom <Y_patient2.t1.nii> ; 
+	prov:wasDerivedFrom <patient2.fonc.nii> ; 
+.
+
+<http://snakemake-provenance#activity-53f8bcbf-6cff-4b91-9437-f742f2a9048a>
+	a prov:Activity ;
+	rdfs:comment """
+		touch W_patient3.fonc.nii
+	""" ;
+	prov:wasAssociatedWith <#apply_norm> ;
+	prov:startedAtTime "2018-05-28T15:38:21.988072"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:21.988126"^^xsd:dateTime; 
+	prov:used <patient3.mat> ; 
+	prov:used <Y_patient3.t1.nii> ; 
+	prov:used <patient3.fonc.nii> ; 
+.
+
+<W_patient3.fonc.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-53f8bcbf-6cff-4b91-9437-f742f2a9048a>;
+    prov:wasAttributedTo <#apply_norm>;
+    rdfs:label "W_patient3.fonc.nii"; 
+	prov:wasDerivedFrom <patient3.mat> ; 
+	prov:wasDerivedFrom <Y_patient3.t1.nii> ; 
+	prov:wasDerivedFrom <patient3.fonc.nii> ; 
+.
+
+<http://snakemake-provenance#activity-d03df776-00f6-4890-a51d-68b9f13fdfab>
+	a prov:Activity ;
+	rdfs:comment """
+		touch W_patient1.fonc.nii
+	""" ;
+	prov:wasAssociatedWith <#apply_norm> ;
+	prov:startedAtTime "2018-05-28T15:38:22.005547"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:22.005581"^^xsd:dateTime; 
+	prov:used <patient1.mat> ; 
+	prov:used <Y_patient1.t1.nii> ; 
+	prov:used <patient1.fonc.nii> ; 
+.
+
+<W_patient1.fonc.nii>
+    a prov:Entity;
+    prov:wasGeneratedBy <http://snakemake-provenance#activity-d03df776-00f6-4890-a51d-68b9f13fdfab>;
+    prov:wasAttributedTo <#apply_norm>;
+    rdfs:label "W_patient1.fonc.nii"; 
+	prov:wasDerivedFrom <patient1.mat> ; 
+	prov:wasDerivedFrom <Y_patient1.t1.nii> ; 
+	prov:wasDerivedFrom <patient1.fonc.nii> ; 
+.
+
+<http://snakemake-provenance#activity-a7d07a6d-3e8d-455e-946e-8339dc5fbe10>
+	a prov:Activity ;
+	prov:wasAssociatedWith <#all> ;
+	prov:startedAtTime "2018-05-28T15:38:22.006988"^^xsd:dateTime;
+	prov:endedAtTime "2018-05-28T15:38:22.006998"^^xsd:dateTime; 
+	prov:used <W_patient1.fonc.nii> ; 
+	prov:used <W_patient2.fonc.nii> ; 
+	prov:used <W_patient3.fonc.nii> ; 
+.
+
